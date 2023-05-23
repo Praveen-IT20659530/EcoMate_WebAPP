@@ -29,14 +29,15 @@ function Login() {
 
       if (data.type === "user") {
         toast.success("Welcome " + data.name);
-        setTimeout(() => {
-          navigate("/");
+            setTimeout(() => {
+          navigate("/dashboard");
         }, 1000);
       } else {
         toast.success("Welcome " + data.name);
-        setTimeout(() => {
-          navigate("/dashboard");
-        }, 1000);
+
+            setTimeout(() => {
+              navigate("/");
+            }, 1000);
       }
     } else {
       toast.error("Server error");

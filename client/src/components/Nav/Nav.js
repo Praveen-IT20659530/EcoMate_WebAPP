@@ -5,7 +5,7 @@ function Nav() {
 
 const storedToken = localStorage.getItem('token');
  
-  const decodedToken = jwt_decode(storedToken);
+const decodedToken = jwt_decode(storedToken);
 const inactivelink = "text-white hover:text-blue-500";
 const activelink = "text-red-500 hover:text-blue-500";
 const router = useLocation();
@@ -61,22 +61,22 @@ const navigate = useNavigate()
             </li>
             <li>
               <a
-                href="/d"
+                href="/add"
                 className={
-                  pathname.includes("/ss") ? activelink : inactivelink
+                  pathname.includes("/add") ? activelink : inactivelink
                 }
               >
-                Pricing
+                Electricity
               </a>
             </li>
             <li>
               <a
-                href="/ds"
+                href="/companyadd"
                 className={
-                  pathname.includes("/ss") ? activelink : inactivelink
+                  pathname.includes("/companyadd") ? activelink : inactivelink
                 }
               >
-                Contact
+                Comapny
               </a>
             </li>
           </ul>

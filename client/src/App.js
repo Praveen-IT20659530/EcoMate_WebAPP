@@ -14,8 +14,21 @@ import SingleAdminPost from "./Pages/AdminPost/SingleAdminPost";
 import Aresource from "./Pages/ResourceCenter/clientresource";
 import SinglePost from "./Pages/SinglePost/SinglePost";
 import Services from "./Pages/Servicesyug/Servicess"
+import ServicessList from "./Pages/Servicesyug/ServicessList";
 import { AuthorizeUser } from "./middleware/auth";
 import { Authorized } from "./middleware/auth";
+import EditServicess from "./Pages/Servicesyug/EditServicess";
+import AddElectricity from './components/AddElectricity';
+import AllData from './components/AllData';
+import EditElectricity from './components/EditElectricity';
+import Report from './components/report';
+import Search from './components/Search';
+import AllCompanies from './components/AllCompanies';
+import AddCompany from './components/AddCompany';
+import UpdateCompany from './components/UpdateCompany';
+import ReportC from './components/Report2.js';
+import Manager from './components/Manager.js';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -77,7 +90,7 @@ const router = createBrowserRouter([
       </AuthorizeUser>
     ),
   },
-    {
+  {
     path: "/resource/edit/:id",
     element: (
       <AuthorizeUser>
@@ -104,9 +117,105 @@ const router = createBrowserRouter([
   {
     path: "/services",
     element: (
-      <Services/>
-      
-      
+      <AuthorizeUser>
+        <Services />
+      </AuthorizeUser>
+    ),
+  },
+  {
+    path: "/serviceslist",
+    element: (
+      <AuthorizeUser>
+        <ServicessList />
+      </AuthorizeUser>
+    ),
+  },  
+  {
+    path: "/add",
+    element: (
+      <AuthorizeUser>
+        <AddElectricity />
+      </AuthorizeUser>
+    ),
+  },
+  {
+    path: "/all",
+    element: (
+      <AuthorizeUser>
+        <AllData />
+      </AuthorizeUser>
+    ),
+  },
+  {
+    path: "/report",
+    element: (
+      <AuthorizeUser>
+        <Report />
+      </AuthorizeUser>
+    ),
+  },
+  {
+    path: "/search",
+    element: (
+      <AuthorizeUser>
+        <Search />
+      </AuthorizeUser>
+    ),
+  },
+  {
+    path: "/electricities/edit/:id",
+    element: (
+      <AuthorizeUser>
+        <EditElectricity />
+      </AuthorizeUser>
+    ),
+  },
+  {
+    path: "/servicesedit/:id",
+    element: (
+      <AuthorizeUser>
+        <EditServicess />
+      </AuthorizeUser>
+    ),
+  },
+  {
+    path: "/company/all",
+    element: (
+      <AuthorizeUser>
+        <AllCompanies />
+      </AuthorizeUser>
+    ),
+  },
+  {
+    path: "/companyadd",
+    element: (
+      <AuthorizeUser>
+        <AddCompany />
+      </AuthorizeUser>
+    ),
+  },
+  {
+    path: "/company/upd/:id",
+    element: (
+      <AuthorizeUser>
+        <UpdateCompany />
+      </AuthorizeUser>
+    ),
+  },
+  {
+    path: "/company/report",
+    element: (
+      <AuthorizeUser>
+        <ReportC />
+      </AuthorizeUser>
+    ),
+  },
+  {
+    path: "/company/manager",
+    element: (
+      <AuthorizeUser>
+        <Manager />
+      </AuthorizeUser>
     ),
   },
   {
